@@ -1,1 +1,1 @@
-bin/hadoop jar contrib/streaming/hadoop-streaming-1.0.3.jar -mapper '/bin/cat' -reducer '/usr/bin/wc -l'  -input /input/kellyValue.log -output /streaming1 
+bin/hadoop jar contrib/streaming/hadoop-streaming-1.0.3.jar -mapper '/bin/cat' -reducer '/usr/bin/wc -l'  -input /input/Value.log -output /streaming1 
