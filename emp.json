@@ -1,0 +1,3 @@
+"name": "John Doe1","salary": 1100000.0,"subordinates": ["Mary Smith1", "Todd Jones"],"deductions": {"Federal Taxes1": .2,"State Taxes": .05,"Insurance": .1},"address": {"street": "1 Michigan Ave.1","city": "Chicago1","state": "IL","zip": 610600}
+"name": "John Doe2","salary": 1200000.0,"subordinates": ["Mary Smith2", "Todd Jones"],"deductions": {"Federal Taxes2": .2,"State Taxes": .05,"Insurance": .1},"address": {"street": "1 Michigan Ave.2","city": "Chicago2","state": "IL","zip": 620600}
+"name": "John Doe3","salary": 1300000.0,"subordinates": ["Mary Smith3", "Todd Jones"],"deductions": {"Federal Taxes3": .2,"State Taxes": .05,"Insurance": .1},"address": {"street": "1 Michigan Ave.3","city": "Chicago3","state": "IL","zip": 630600}

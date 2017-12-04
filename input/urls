@@ -1,0 +1,4 @@
+http://localhost:50070/dfshealth.jsp
+http://localhost:50070/logs/
+http://localhost:50075/browseDirectory.jsp?namenodeInfoPort=50070&dir=/
+http://localhost:50075/browseBlock.jsp?blockId=-5115678219309570455&blockSize=185&genstamp=1005&filename=%2FbasicInput&datanodePort=50010&namenodeInfoPort=50070

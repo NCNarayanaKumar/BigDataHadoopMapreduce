@@ -1,0 +1,2 @@
+hadoop is defacto of big data processing
+hadoop is not for real time processing

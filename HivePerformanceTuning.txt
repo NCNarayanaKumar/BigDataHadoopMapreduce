@@ -1,0 +1,38 @@
+set io.sort.mb=512
+set io.sort.factor=100
+set mapred.child.jvm.opts=-Xmx2048mb
+set hive.map.aggr=true
+set hive.exec.parallel=true
+set mapred.tasks.reuse.num.tasks=-1
+set hive.mapred.map.speculative.execution=false
+set hive.mapred.reduce.speculative.execution=false
+
+
+
+You can have a look at join optimizations as well as group by optimizations
+
+Join optimization - Based on your data sets you can go in with map side join or bucketed map join or
+to enable map join -> set hive.auto.convert.join = true;
+
+to enable bucketed map join ->  set hive.optimize.bucketmapjoin = true (    The prerequisite here is both the tables should be bucketed on the join column.)
+If the data in buckets are sorted then you can go in with a sort merge join as well, you need to enable the following properties
+
+ set hive.input.format=org.apache.hadoop.hive.ql.io.BucketizedHiveInputFormat;
+  set hive.optimize.bucketmapjoin = true;
+  set hive.optimize.bucketmapjoin.sortedmerge = true;
+
+
+For details you can refer the following url
+https://cwiki.apache.org/confluence/display/Hive/LanguageManual+Joins
+
+Group By OPtimization - You can go ahead with a few group by optimizations as well. A few pointers in here
+http://mail-archives.apache.org/mod_mbox/hive-user/201209.mbox/%3CB55FF166-239E-4E39-BF92-3AE59EB78A27@gmail.com%3E
+
+
+Hive Indexes - Join and Group by gets optimized better with buckets. Based on your query you need to pre determine how your tables need to be bucketed. Indexing also gives you great performance advantage over queries that involves group by and where. Join optimization using indexes is in progress
+https://issues.apache.org/jira/browse/HIVE-2845
+
+
+RC file or Sequence File is a choice to be made based on the query patterns. If you are querying only a few columns then RC files gives you a performance edge but if the queries are spanned across pretty much all columns then use the more generalized Sequence Files.
+
+

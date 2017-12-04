@@ -1,0 +1,9 @@
+1) Grep example
+   lines = LOAD '/home/hadoop/work/input/sample.txt';
+   dump lines;
+   hadoopLines = FILTER lines BY $0 MATCHES '.*hadoop+.*';
+   STORE hadoopLines INTO '/home/hadoop/work/output/cleanedLines';
+   
+   
+   
+   ./pig -x local -P  /home/hadoop/work/input/pig/user.properties  /home/hadoop/work/input/pig/sed.pig

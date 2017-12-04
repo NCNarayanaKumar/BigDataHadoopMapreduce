@@ -1,0 +1,9 @@
+1) PhoneRetrievalJob         /home/kelly1/Work/input/users  /home/kelly1/Work/input/userPhone /home/kelly1/Work/input/lookup.txt
+2) WordPairCountJob			/home/kelly1/Work/input/wordpair.txt /home/kelly1/Work/input/wordpairCount
+3) WordCountPerFileJob		/home/kelly1/Work/input/seqFile  /home/kelly1/Work/input/perFileCount
+4) URICountJob			/home/kelly1/Work/input/keyValueInput.log /home/kelly1/Work/output/uricount
+
+
+Run  run before WordCountPerFileJob
+5) SequenceFileGenerator  /home/kelly1/Work/input/smallFiles /home/kelly1/Work/input/seqFile
+6) NLineJob      /home/kelly1/Work/input/users

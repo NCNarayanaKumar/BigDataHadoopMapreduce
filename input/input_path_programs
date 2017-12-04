@@ -1,0 +1,49 @@
+Program input paths:-
+----------------------
+
+wordcountjob
+${yourpathuptoInput}/input/words  ${yourpathuptoInput}/output/wordcount
+
+maxlengthword
+${yourpathuptoInput}/input/words  ${yourpathuptoInput}/output/maxlengthword
+
+sedjob
+${yourpathuptoInput}/input/words  ${yourpathuptoInput}/output/sed
+
+grepjob
+${yourpathuptoInput}/input/words  ${yourpathuptoInput}/output/grep
+
+wordcountbigram
+${yourpathuptoInput}/input/words  ${yourpathuptoInput}/output/wordcountbigram
+
+avgurlcount
+${yourpathuptoInput}/input/urlcount  ${yourpathuptoInput}/output/avgurlcount
+
+wordpaircountjob
+${yourpathuptoInput}/input/wordpair  ${yourpathuptoInput}/output/wordpaircount
+
+nlinewordpair 
+${yourpathuptoInput}/input/wordpair  ${yourpathuptoInput}/output/nlinewordpair
+
+sequencefilegenerator
+${yourpathuptoInput}/input/smallFiles  ${yourpathuptoInput}/input/seqFile
+
+wordcountperfile
+${yourpathuptoInput}/input/seqFile  ${yourpathuptoInput}/output/wordcountperfile
+
+urlfetch
+${yourpathuptoInput}/input/urls  ${yourpathuptoInput}/output/urltitles
+
+phoneretrievals
+${yourpathuptoInput}/input/users  ${yourpath}/input/lookup	/home/hadoop/workspace/narendra-training/output/phone
+
+hbasemapreducejob
+${yourpathuptoInput}/input/pigUrlCount
+
+
+
+
+
+
+
+
